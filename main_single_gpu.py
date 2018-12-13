@@ -200,7 +200,7 @@ def main():
 
 def build_model():
 
-    model = models.__dict__[args.arch](pretrained=True, num_classes=101)
+    model = models.__dict__[args.arch](pretrained=False, num_classes=77)
     model.cuda()
     return model
 
