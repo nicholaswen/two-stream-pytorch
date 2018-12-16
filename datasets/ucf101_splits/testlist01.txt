@@ -1,20 +1,20 @@
-shake/shake_line_fast.avi
-fadeInDownBig/fadeInDownBig_image_fast.avi
-zoomInUp/zoomInUp_image_fast.avi
-hinge/hinge_text_faster.avi
-flipOutY/flipOutY_image_slow.avi
-fadeInLeft/fadeInLeft_square_slower.avi
-rotateInUpRight/rotateInUpRight_text_slow.avi
-rotateInDownLeft/rotateInDownLeft_image_slower.avi
-wobble/wobble_line_faster.avi
-rotateOutUpLeft/rotateOutUpLeft_square_faster.avi
-flash/flash_line_slower.avi
-lightSpeedOut/lightSpeedOut_square_fast.avi
-fadeInUp/fadeInUp_line_slow.avi
-fadeOutLeftBig/fadeOutLeftBig_image_faster.avi
-fadeOutRight/fadeOutRight_text_fast.avi
-slideOutRight/slideOutRight_square_slow.avi
-zoomOutLeft/zoomOutLeft_square_slower.avi
-bounceOutRight/bounceOutRight_line_faster.avi
-bounceInUp/bounceInUp_square_slow.avi
-slideInRight/slideInRight_text_slower.avi
+shake/shake_line_fast.avi 5
+fadeInDownBig/fadeInDownBig_image_fast.avi 23
+zoomInUp/zoomInUp_image_fast.avi 63
+hinge/hinge_text_faster.avi 55
+flipOutY/flipOutY_image_slow.avi 42
+fadeInLeft/fadeInLeft_square_slower.avi 24
+rotateInUpRight/rotateInUpRight_text_slow.avi 49
+rotateInDownLeft/rotateInDownLeft_image_slower.avi 46
+wobble/wobble_line_faster.avi 9
+rotateOutUpLeft/rotateOutUpLeft_square_faster.avi 53
+flash/flash_line_slower.avi 2
+lightSpeedOut/lightSpeedOut_square_fast.avi 44
+fadeInUp/fadeInUp_line_slow.avi 28
+fadeOutLeftBig/fadeOutLeftBig_image_faster.avi 34
+fadeOutRight/fadeOutRight_text_fast.avi 35
+slideOutRight/slideOutRight_square_slow.avi 75
+zoomOutLeft/zoomOutLeft_square_slower.avi 66
+bounceOutRight/bounceOutRight_line_faster.avi 19
+bounceInUp/bounceInUp_square_slow.avi 15
+slideInRight/slideInRight_text_slower.avi 71
