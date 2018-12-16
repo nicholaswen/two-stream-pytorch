@@ -1,3 +1,4 @@
 *.pyc
 *.log
 checkpoints
+checkpoints_save
