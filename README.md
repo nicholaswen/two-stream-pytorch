@@ -13,7 +13,7 @@ dense_flow
 ```
 In order to extract optical flow, use the [dense_flow](https://github.com/yjxiong/dense_flow/) library. To simplify the installation process run using OpenCV 2.4.13. After extraction, 
 
-If you need to use OpenCV3, the installation process is significantly more tedious, but a branch can be [here](https://github.com/yjxiong/dense_flow/tree/opencv-3.1).
+If you need to use OpenCV3, the installation process is significantly more tedious, but a branch supporting OpenCV3 can be [here](https://github.com/yjxiong/dense_flow/tree/opencv-3.1).
 
 ## Data Preparation
 
