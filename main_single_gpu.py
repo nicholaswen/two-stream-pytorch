@@ -117,7 +117,7 @@ def main():
     train_transform = video_transforms.Compose([
             # video_transforms.Scale((256)),
             video_transforms.MultiScaleCrop((224, 224), scale_ratios),
-            video_transforms.RandomHorizontalFlip(),
+            #video_transforms.RandomHorizontalFlip(),
             video_transforms.ToTensor(),
             normalize,
         ])
@@ -175,7 +175,10 @@ def main():
 
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch)
-
+        print("Epoch")
+        print(epoch)
+        print("Dataset Size")
+        print(len(train_loader.dataset))
         # train for one epoch
         train(train_loader, model, criterion, optimizer, epoch)
 
@@ -218,16 +221,23 @@ def train(train_loader, model, criterion, optimizer, epoch):
     acc_mini_batch = 0.0
 
     for i, (input, target) in enumerate(train_loader):
-
         input = input.float().cuda(async=True)
         target = target.cuda(async=True)
         input_var = torch.autograd.Variable(input)
         target_var = torch.autograd.Variable(target)
-
+        #print("Target:")
+        #print(target)
         output = model(input_var)
-
+        #print("Output:")
+        _, pred = output.topk(3, 1, True, True)
+        pred = pred.t()
+        #print(pred)
         # measure accuracy and record loss
         prec1, prec3 = accuracy(output.data, target, topk=(1, 3))
+        #print("Prec1")
+        #print(prec1)
+        #print("Prec3")
+        #print(prec3)
         acc_mini_batch += prec1[0]
         loss = criterion(output, target_var)
         loss = loss / args.iter_size
