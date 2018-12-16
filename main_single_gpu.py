@@ -69,6 +69,8 @@ parser.add_argument('--save-freq', default=25, type=int,
                     metavar='N', help='save frequency (default: 25)')
 parser.add_argument('--resume', default='./checkpoints', type=str, metavar='PATH',
                     help='path to latest checkpoint (default: none)')
+parser.add_argument('--resume-path', default='', type=str, metavar='PATH',
+                    help='path to checkpoint file')
 parser.add_argument('-e', '--evaluate', dest='evaluate', action='store_true',
                     help='evaluate model on validation set')
 
@@ -175,10 +177,6 @@ def main():
 
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch)
-        print("Epoch")
-        print(epoch)
-        print("Dataset Size")
-        print(len(train_loader.dataset))
         # train for one epoch
         train(train_loader, model, criterion, optimizer, epoch)
 
@@ -204,6 +202,10 @@ def main():
 def build_model():
 
     model = models.__dict__[args.arch](pretrained=False, num_classes=77)
+    if args.resume_path != '':
+        checkpoint = torch.load(args.resume_path)
+        print(checkpoint)
+        model.load_state_dict(checkpoint['state_dict'])
     model.cuda()
     return model
 
