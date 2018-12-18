@@ -1,3 +1,5 @@
+#copy from https://github.com/bryanyzhu/two-stream-pytorch
+
 import os
 import time
 import argparse
